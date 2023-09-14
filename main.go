@@ -17,17 +17,18 @@ import (
 
 // TODO: refactor
 // TODO: make it more generic
-// TODO: upload it to github as a repository
 // TODO: .env
 // TODO: changelog
 // TODO: readme
 // TODO: args
 // TODO: better logging
+// TODO: docker file
+// TODO: task file
+// TODO: docker compose
 
 func main() {
-	var scopeID uint64 = 1
-	host, port := "localhost", "9004"
-	filename := "dump.zip"
+	host, port := "localhost", "9004" // TODO: as arg
+	filename := "dump.zip"            // TODO: as arg
 
 	file, err := os.Open(filename)
 	if err != nil {
