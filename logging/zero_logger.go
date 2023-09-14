@@ -4,7 +4,7 @@ import (
 	"os"
 	"time"
 
-	"grpc-file-streamer/apperrors"
+	"grpc-file-streamer/cerrors"
 	"grpc-file-streamer/env"
 
 	"github.com/rs/zerolog"
@@ -37,7 +37,7 @@ func InitLogger() (zerolog.Logger, error) {
 
 	logLevel, errParse := zerolog.ParseLevel(strLogLevel)
 	if errParse != nil {
-		return logger, apperrors.ErrValidation{
+		return logger, cerrors.ErrValidation{
 			Issue:  errParse,
 			Caller: "NewLogger",
 		}

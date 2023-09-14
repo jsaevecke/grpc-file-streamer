@@ -1,7 +1,6 @@
 package env
 
 // keys to retrieve environmental variables
-// general cloud environment variable keys
 const (
 	// environment
 	EnvEnvironment = "ENVIRONMENT"

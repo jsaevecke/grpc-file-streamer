@@ -3,7 +3,7 @@ package logging
 import (
 	"errors"
 
-	"grpc-file-streamer/apperrors"
+	"grpc-file-streamer/cerrors"
 
 	"github.com/asaskevich/govalidator"
 	"github.com/rs/zerolog"
@@ -11,14 +11,14 @@ import (
 
 func EnrichLoggerWithServiceFields(serviceFields *ParamsServiceFields, logger *zerolog.Logger) (zerolog.Logger, error) {
 	if serviceFields == nil {
-		return *logger, apperrors.ErrValidation{
+		return *logger, cerrors.ErrValidation{
 			Issue:  errors.New("service fields are nil"),
 			Caller: "EnrichLoggerWithServiceFields",
 		}
 	}
 
 	if _, errValidate := govalidator.ValidateStruct(serviceFields); errValidate != nil {
-		return *logger, apperrors.ErrValidation{
+		return *logger, cerrors.ErrValidation{
 			Issue:  errValidate,
 			Caller: "EnrichLoggerWithServiceFields",
 		}
