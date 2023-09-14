@@ -25,6 +25,7 @@ import (
 // TODO: docker file
 // TODO: task file
 // TODO: docker compose
+// TODO: tests
 
 func main() {
 	host, port := "localhost", "9004" // TODO: as arg
