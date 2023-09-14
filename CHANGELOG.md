@@ -14,8 +14,16 @@ straightforward as possible.
 [comment]: <### Changed> (This is a comment, it will not be included)
 [comment]: <### Removed> (This is a comment, it will not be included)
 
+## [0.1.0] 14-09-2023
 
-## [0.0.0] 17-04-2023
+### Added
+
+- general logging initialization for services
+- environment keys for easy access to environment values
+- simple configuration struct to load in environment variables
+- custom errors
+
+## [0.0.0] 14-09-2023
 
 ### Added
 

@@ -26,6 +26,8 @@ import (
 // TODO: task file
 // TODO: docker compose
 // TODO: tests
+// TODO: as service
+// TODO: reduce main code to minimum
 
 func main() {
 	host, port := "localhost", "9004" // TODO: as arg
