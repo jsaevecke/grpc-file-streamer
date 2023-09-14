@@ -1,4 +1,4 @@
-package apperrors
+package cerrors
 
 const (
 	// Initialization Error Messages

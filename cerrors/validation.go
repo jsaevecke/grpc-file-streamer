@@ -1,20 +1,9 @@
-package apperrors
+package cerrors
 
 import (
 	"fmt"
 )
 
-// ErrValidation for passing a cause besides reporting use:
-//
-//	fmt.Errorf("%w+%w", &err, errors.New("some internal issue"))
-//
-// with err being
-//
-//	err := ErrReporting{
-//		Code: CodeAlreadyExists,
-//	}
-//
-// The cause should be logged to standard logger.
 type ErrValidation struct {
 	Issue error // to report issue plus cause
 
